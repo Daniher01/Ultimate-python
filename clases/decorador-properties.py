@@ -1,8 +1,8 @@
 class Perro:
     def __init__(self, nombre):
-        self.nombre = nombre  # metodo con lógica de validacion
-
+        self.nombre = nombre  # metodo con lógica de validacion -> setter
     # ? asigna ese metodo como el getter de la propiedad (en este caso self.__nombre)
+
     @property
     def nombre(self):
         print('pasando por getter')
@@ -14,7 +14,7 @@ class Perro:
         print('pasando por setter')
         if nombre.strip():
             # valida que el nombre sea un string con datos
-            self.nombre = nombre
+            self.__nombre = nombre
         return
 
     """
