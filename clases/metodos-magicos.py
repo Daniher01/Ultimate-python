@@ -13,6 +13,12 @@ class Perro:
         self.nombre = nombre
         self.edad = edad
 
+    def __del__(self):
+        """sirve para eliminar una instancia de la clase
+            se llama usando #? del nombre instancia
+        """
+        print(f"chao perro {self.nombre} ")
+
     # ejemplo de metodo magico
     def __str__(self) -> str:
         return f"Clase perro: {self.nombre}"
@@ -25,3 +31,4 @@ perro = Perro('rufencio', 10)
 print(perro)
 texto = str(perro)  # llama la funcion str
 print(texto)
+del perro
