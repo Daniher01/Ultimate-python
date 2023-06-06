@@ -1,3 +1,9 @@
+""" 
+El decorador @property se utiliza para convertir un metodo en un atributo solo de lectura,
+es decir, que no se puede modificar, un ejemplo es el metodo get() que solo se usa para obtener datos, no para modificarlos
+"""
+
+
 class Perro:
     def __init__(self, nombre):
         self.nombre = nombre  # metodo con lógica de validacion -> setter
