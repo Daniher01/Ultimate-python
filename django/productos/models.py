@@ -11,7 +11,7 @@ class Categoria(models.Model):
         return self.nombre
 
 
-class Productos(models.Model):
+class Producto(models.Model):
     nombre = models.CharField(max_length=255)
     stock = models.IntegerField()
     puntaje = models.FloatField()
