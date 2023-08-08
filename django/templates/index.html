@@ -15,7 +15,12 @@
         <tbody>
         {% for producto in productos %}        
             <tr>
-                <td>{{ producto.nombre }} </td>
+                <td>
+                    {% comment %} ! productos:detalle es una convencion que viene de urls.py de la app de producto {% endcomment %}
+                    <a href=" {% url 'productos:detalle' producto.id %}">
+                        {{ producto.nombre }} 
+                    </a>
+                </td>
                 <td>{{ producto.stock }}</td>
                 <td>{{ producto.puntaje }}</td>
                 <td>{{ producto.categoria }}</td>

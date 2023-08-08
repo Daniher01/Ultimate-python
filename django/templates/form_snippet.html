@@ -1,0 +1,31 @@
+{% comment %} creando un filtro personalizado para los errores {% endcomment %}
+{% load add_attr %}
+
+{% for field in form %}
+<div class="mb-3">
+    {{field.label_tag}} 
+    {% if field.errors %}
+        {{field|add_attr:"class:is-invalid"}}
+    {% else %}
+        {{field}}
+    {% endif %}
+    <div class="invalid-feedback">
+        {% for error in field.errors %}
+            {{error}}
+        {% endfor %}
+    </div>
+</div>
+{% endfor %}
+
+{% comment %}
+? desde boostrap, se le agrega la clase invalid-feedback
+? a los campos de error para personalizar con css los errores de formulario 
+
+
+* Esta plantilla es utilizada gracias a la configuracion de 
+* CustomFormRenderer creada en el settings.py del proyecto
+* y la clase ProductoForm en el forms.py de la aplicacion productos
+
+link para personalizar los componenter del formulario
+! https://github.com/django/django/tree/main/django/forms/templates/django/forms
+{% endcomment %}
