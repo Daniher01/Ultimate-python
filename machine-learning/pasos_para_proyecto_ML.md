@@ -20,3 +20,12 @@
 
 > **Recomendable** Usar Jupyter para trabajar en proyectos de ML
 >
+#### Links
+https://www.kaggle.com/
+https://scikit-learn.org/stable/
+
+## Ejemplo de problema real
+**Nintendo**
+- Sugerir juegoas 1 vez al mes
+- Nuevos usuarios
+- Solo los que pueda interesarles
